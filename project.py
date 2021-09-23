@@ -4,7 +4,7 @@ import statistics
 import random 
 import csv
 import pandas as pd 
-
+mean_of_sample1=64.908
 df=pd.read_csv('medium_data.csv')
 data=df['claps'].tolist()
 
@@ -24,5 +24,5 @@ fig.add_trace(go.Scatter(x=[FStd_DevEnd,FStd_DevEnd],y=[0,0.17],mode='lines',nam
 fig.add_trace(go.Scatter(x=[SStd_devStart,SStd_devStart],y=[0,0.17],mode='lines',name='Std_dev2'))
 fig.add_trace(go.Scatter(x=[SStd_DevEnd,SStd_DevEnd],y=[0,0.17],mode='lines',name='Std_dev2'))
 fig.show()
-zscore=(64.908-mean_pop)/std_dev_pop
+zscore=(mean_of_sample1-mean_pop)/std_dev_pop
 print (zscore)
